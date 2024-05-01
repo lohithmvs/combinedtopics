@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
+    <style>
+        .floating{
+            float: right;
+            margin-right: 500px;
+        }
+        .googlefont{
+            font-family: "Jacquard 24", system-ui;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .objectfit1{
+            object-fit: contain; /*image will come to original shape */
+        }
+        .objectfit2{
+            object-fit: cover;
+        }
+        .objectfit3{
+            object-fit: fill;
+        }
+        .objectfit4{
+            object-fit: cover;
+            object-position:90% 90%;
+        }
+        .websitemasking{
+            -webkit-mask-image: url("./images/product_02.jpg");
+            -webkit-mask-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>float left and right</h1>
+        <img src="./images/about-heading.jpg" alt="" width="200px" height="200px">
+        <img src="./images/services-bg.jpg" alt="" class=floating width="200px" height="200px">
+    </div> <br><br><br>
+    <div class="googlefont">
+        <h1>Google fonts</h1>
+        <span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate esse enim tenetur ea, ducimus illum reprehenderit nisi? Sapiente debitis dignissimos
+            , esse nemo mollitia, voluptate ullam accusantium ea adipisci veritatis at.</span>
+    </div>
+    <div>
+        <h1>Object-fit</h1>
+        <h2>for "contain" image will come to original size</h2>
+        <img src="./images/feature-image.jpg" alt="" height="400px" width="400px" class="objectfit1"> <br>
+        <h2>for "cover" some image will be missing</h2>
+        <img src="./images/feature-image.jpg" alt="" height="400px" width="400px" class="objectfit2"> <br>
+        <h2>for "fill" image will be covered for the length we provide</h2>
+        <img src="./images/feature-image.jpg" alt="" height="400px" width="400px" class="objectfit3"> <br>
+        <h2>for "object-position" image will be moved inside</h2>
+        <img src="./images/feature-image.jpg" alt="" height="400px" width="400px" class="objectfit4">
+    </div>
+    <div class="websitemasking">
+        <img src="./images/slide_02.jpg" alt="">
+    </div>
+</body>
+</html>
